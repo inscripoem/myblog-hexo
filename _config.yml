@@ -3,17 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 文诗的万事屋
+subtitle: in exploration of everything
+description: 文诗的个人博客与相关网址导航
 keywords:
-author: John Doe
-language: en
+author: inscripoem
+language: 
+  - zh-CN
+  - en
 timezone: ''
+favicon: https://pic.inscripoem.com/i/2022/09/25/633057362b2eb.png
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://www.inscripoem.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -97,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
