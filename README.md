@@ -1,2 +1,1 @@
-# aoikaze-hexo
-风蓝动漫社的hexo页面
+# myblog-hexo
