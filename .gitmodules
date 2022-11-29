@@ -1,4 +1,4 @@
 [submodule "themes/volantis"]
 	path = themes/volantis
-	url = git@github.com:inscripoem/hexo-theme-inscripoem.git
+	url = https://github.com/inscripoem/hexo-theme-inscripoem.git
 	branch = 6.0
