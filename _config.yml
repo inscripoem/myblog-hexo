@@ -12,12 +12,12 @@ language:
   - zh-CN
   - en
 timezone: ''
-favicon: https://pic.inscripoem.com/i/2022/09/25/633057362b2eb.png
+favicon: https://upyun.inscripoem.com/2022/11/29/6385dd53f1b68.png
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.inscripoem.com
-permalink: :year/:month/:day/:title/
+url: http://127.0.0.1:44000
+permalink: posts/:name/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -31,11 +31,12 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 404.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: true
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -47,7 +48,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -106,3 +107,22 @@ theme: volantis
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Plugins
+## RSS feed: hexo-generator-feed
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: 
+  autodiscovery: true
+  template:
+
+## hexo-ruby-character
+### {% ruby Base|top %}

@@ -11,10 +11,11 @@
         {
             "label": "dev",
             "type": "shell",
-            "command": "hexo s -p 4090",
+            "command": "hexo s -p 44000",
             "dependsOn": [
                 "generate"
-            ]
+            ],
+            "problemMatcher": []
         }
     ]
 }

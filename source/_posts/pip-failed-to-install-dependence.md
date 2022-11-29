@@ -3,21 +3,23 @@ title: pip安装依赖失败的一个可能原因
 tags: []
 id: '17'
 categories:
-  - - 开发/服务器踩坑记录
+  - 开发/服务器踩坑记录
 date: 2022-02-01 16:55:08
 ---
 
 今天在使用弹幕自动切片工具的时候安装依赖的过程报错，错误日志已经不可考，我在网上找到了类似的报错日志以供参考。
 
+<!--read more-->
+
 在出现如下报错日志的时候，可以用
 
-```
+```Bash
 pip --version
 ```
 
 来检查pip的版本，如果pip的版本没有问题，可以试图关闭vpn来解决，我把代理关闭后马上不报错了。
 
-```
+```plaintext
 Installing packages failed: Installing packages: error occurred. Details…
 ERROR: Exception:
 Traceback (most recent call last):

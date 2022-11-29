@@ -3,7 +3,7 @@ title: Hexo-Heroku部署记
 tags: []
 id: '58'
 categories:
-  - - 开发/服务器踩坑记录
+  - 开发/服务器踩坑记录
 date: 2022-02-06 02:59:55
 ---
 
@@ -11,13 +11,15 @@ date: 2022-02-06 02:59:55
 
 心血来潮想在新注册的Heroku上部署点什么东西，那就是Hexo了，其实是想给一起玩的朋友建一个发发疯的主页。
 
+<!--read more-->
+
 这次的部署过程主要基于[Hexo官方文档](https://hexo.io/zh-cn/docs/)以及[Hexo - Heroku 部署教學](https://blog.kennycoder.io/2019/08/04/Hexo-Heroku%E9%83%A8%E7%BD%B2%E6%95%99%E5%AD%B8/)，在windows平台上进行本地操作，由于之前安装过了Git和Node.js（之后发现单独的某个node版本还是有些局限，见后文），这部分的安装过程略过。
 
 首先根据教程安装Heroku CLI并创建app，这一步并没有太大问题。在运行`heroku login`时出现了第一个问题——国内不使用代理无法连接登录，会出现Invalid Request报错，但使用代理后又会出现IP不匹配的问题。在这一步完成之前是无法使用git推送到heroku上的，所幸在[解决 Heroku CLI 登录问题](https://blog.csdn.net/qq_42951560/article/details/109717160)中找到了方案，使用`heroku login -i`启用密码登录绕过网页登录。
 
 然后就是hexo和部署工具的安装，命令如下：
 
-```
+```Bash
 $ npm install -g hexo-cli
 $ hexo init <folder>
 $ cd <folder>
@@ -27,7 +29,7 @@ $ npm install hexo-deployer-heroku --save
 
 这几步完成后，修改博客目录下的`_config.yml`，在deploy下添加如下配置：
 
-```
+```yml
 deploy:
   type: heroku
   repo: <repository url>
@@ -35,7 +37,7 @@ deploy:
 
 并在url一栏中修改网址，接着理论上运行
 
-```
+```Bash
 $ hexo clean
 $ hexo g
 $ hexo d
@@ -43,7 +45,7 @@ $ hexo d
 
 就可以访问了，但由于是在heroku网页上创建的app，又是直接下载hexo的文件，这时候博客文件夹是没有git仓库的属性的，会报错
 
-```
+```plaintext
  fatal: Not a git repository (or any of the parent directories): .git 
 ```
 
@@ -51,7 +53,7 @@ $ hexo d
 
 在这之后的`hexo d`中，又出现了新的问题。
 
-```
+```plaintext
 FATAL Something's wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
 TypeError [ERR_INVALID_ARG_TYPE]: The "mode" argument must be integer. Received an instance of Object
 ```
@@ -60,7 +62,7 @@ TypeError [ERR_INVALID_ARG_TYPE]: The "mode" argument must be integer. Received 
 
 在官网下载nvm后安装，记得安装到需要管理员权限的文件夹时（比如Program Files）要用管理员权限运行终端。在nvm安装目录的settings.txt中添加如下两条镜像。
 
-```
+```plaintext
 node_mirror: https://npm.taobao.org/mirrors/node/
 npm_mirror: https://npm.taobao.org/mirrors/npm/
 ```
@@ -81,7 +83,7 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 然后就是激动人心的重装npm包，`hexo clean`之后`hexo g`，`hexo d`，喜闻乐见的出了新错误
 
-```
+```plaintext
 npm ERR! missing script: start
 ```
 

@@ -3,7 +3,7 @@ title: pycharm终端无法使用python命令的一个可能解决方案
 tags: []
 id: '26'
 categories:
-  - - 开发/服务器踩坑记录
+  - 开发/服务器踩坑记录
 date: 2022-02-01 18:22:42
 ---
 
