@@ -345,14 +345,17 @@ comments:
   # https://github.com/laymonage/giscus
   giscus:
     # 以下配置按照 yml 格式增删填写即可
-    # repo: xxx/xxx
-    # repo-id: xxx
-    # category: xxx
-    # category-id: xxx
-    # mapping: "pathname"
-    # reactions-enabled: "1"
-    # emit-metadata: "0"
-    # lang: "zh-CN"
+    repo: "inscripoem/myblog-hexo"
+    repo-id: "R_kgDOIXTnFQ"
+    category: "Comments"
+    category-id: "DIC_kwDOIXTnFc4CS1Mb"
+    mapping: "pathname"
+    srtict: "1"
+    reactions-enabled: "1"
+    emit-metadata: "0"
+    input-position: "top"
+    lang: "zh-CN"
+    loading: "lazy"
     # 以上配置按照 yml 格式增删填写即可
     theme:
       light: "light" # https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css
@@ -633,7 +636,7 @@ tag_plugins:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
-  layout: [aplayer, social, license, info, copyright]
+  layout: [aplayer, social, license, upyun, copyright, icp]
   social:
     - icon: #fa-solid fa-rss
       url:
@@ -653,6 +656,20 @@ site_footer:
   copyright: '[Copyright © 2020-2022 inscripoem](/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
+  upyun: >
+    <p>
+    本站由 
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="text-decoration:none;">
+        <img src="https://upyun.inscripoem.com/static-images/upyun-logo.png" style="height:2em;display:inline-block;vertical-align:middle;margin-bottom:0.1em;"></img>
+      </a>
+     提供CDN加速/云存储服务，使用 
+     <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.0" target="_blank" class="codename">Volantis</a>
+      作为主题
+    </p>
+  icp: >
+    <p>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">辽ICP备2021001683号</a>
+    </p>
 ############################### Site Footer ############################### > end
 
 ############################### Plugins ############################### > start
