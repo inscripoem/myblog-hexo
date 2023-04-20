@@ -142,12 +142,12 @@ cover:
       url: /contributors/
     - name: 归档
       icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4da.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
+      img: volantis-static/media/twemoji/assets/svg/1f4da.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
       url: /archives/
-    - name: 关于
+    - name: 关于我
       icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f35c.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
-      url: about/
+      img: volantis-static/media/twemoji/assets/svg/1f35c.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
+      url: /about/
 ############################### Cover ############################### > end
 
 pages:
@@ -667,6 +667,10 @@ site_footer:
       作为主题
     </p>
   icp: >
+    <p>
+      <img src="https://upyun.inscripoem.com/static-images/moe-icon400.png" width="20em" height="20em" style="display:inline-block;vertical-align:middle;margin-bottom:0.1em;">
+      <a href="https://icp.gov.moe/?keyword=20220427" target="_blank">萌ICP备20220427号</a>
+    </p>
     <p>
       <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">辽ICP备2021001683号</a>
     </p>
